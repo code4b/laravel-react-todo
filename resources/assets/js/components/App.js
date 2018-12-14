@@ -201,12 +201,6 @@ handleSubmit(e) {
         // const updatedTasks = this.state.tasks.filter(isNotId);
         // this.setState({ tasks: updatedTasks });
         // make delete request to the backend
-        axios
-        .post('/tasks/complete', {
-            id: id
-        })
-        .then(response => {
-            
         this.state.tasks.map((task) => {
             if (task.id === id)
                 task.completed = !task.completed;
@@ -221,6 +215,13 @@ handleSubmit(e) {
   
             return task;
           });
+        axios
+        .post('/tasks/complete', {
+            id: id
+        })
+        .then(response => {
+            
+  
           this.setState({
             name: '',
         });
