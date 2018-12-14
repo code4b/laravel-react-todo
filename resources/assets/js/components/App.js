@@ -84,6 +84,8 @@ handleSubmit(e) {
                     // then clear the value of textarea
                     this.setState({
                         name: '',
+                        id:'',
+                        buttonTxt:'Create'
                     });
                 });
         }
