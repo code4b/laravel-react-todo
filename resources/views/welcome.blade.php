@@ -82,7 +82,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                BISMILLAH
+                TODO APP
                 </div>
 
             </div>
