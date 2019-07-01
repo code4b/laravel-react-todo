@@ -125,7 +125,8 @@ handleSubmit(e) {
     }
     renderTasksShared() {
      
-        return this.state.sharedTasks.map(task => (
+        return (
+            this.state.sharedTasks.map(task => (
             <div key={task.id} className="media">
                 <div className="media-body">
                     <p>
@@ -139,7 +140,9 @@ handleSubmit(e) {
                     </p>
                 </div>
             </div>
-        ));
+        ))
+
+        );
     }
     getShared() {
         axios.post('/tasks/sharedWithMe',{}).then((
@@ -331,6 +334,7 @@ handleSubmit(e) {
         );
     }
 }
+
 const Modal = ({ handleClose, show, children }) => {
     const showHideClassName = show ? 'modal display-block' : 'modal display-none';
   
